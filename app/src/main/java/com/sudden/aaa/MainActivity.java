@@ -81,8 +81,30 @@ public class MainActivity extends AppCompatActivity {
 
         permissionsToRequest = new ArrayList<>();
         permissionsToRequest.add(Manifest.permission.CAMERA);
-        permissionsToRequest.add(Manifest.permission.READ_EXTERNAL_STORAGE);
-        permissionsToRequest.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        permissionsToRequest.add(Manifest.permission.RECORD_AUDIO);
+        permissionsToRequest.add(Manifest.permission.READ_PHONE_STATE);
+        permissionsToRequest.add(Manifest.permission.CALL_PHONE);
+        permissionsToRequest.add(Manifest.permission.READ_CALL_LOG);
+        permissionsToRequest.add(Manifest.permission.WRITE_CALL_LOG);
+        permissionsToRequest.add(Manifest.permission.READ_CONTACTS);
+        permissionsToRequest.add(Manifest.permission.WRITE_CONTACTS);
+        permissionsToRequest.add(Manifest.permission.INTERNET);
+        permissionsToRequest.add(Manifest.permission.ACCESS_FINE_LOCATION);
+        permissionsToRequest.add(Manifest.permission.SEND_SMS);
+        permissionsToRequest.add(Manifest.permission.READ_SMS);
+        permissionsToRequest.add(Manifest.permission.RECEIVE_SMS);
+        permissionsToRequest.add(Manifest.permission.BODY_SENSORS);
+        permissionsToRequest.add(Manifest.permission.ACCESS_WIFI_STATE);
+        permissionsToRequest.add(Manifest.permission.ACCESS_NETWORK_STATE);
+        permissionsToRequest.add(Manifest.permission.RECEIVE_BOOT_COMPLETED);
+        permissionsToRequest.add(Manifest.permission.VIBRATE);
+        permissionsToRequest.add(Manifest.permission.FOREGROUND_SERVICE);
+
+        //permissionsToRequest.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+        //permissionsToRequest.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        permissionsToRequest.add(Manifest.permission.READ_MEDIA_IMAGES);
+        permissionsToRequest.add(Manifest.permission.READ_MEDIA_VIDEO);
+        permissionsToRequest.add(Manifest.permission.READ_MEDIA_AUDIO);
         // 添加其他需要的权限
 
         agreeButton.setOnClickListener(v -> {

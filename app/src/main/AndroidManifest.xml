@@ -17,15 +17,18 @@
     <!-- 存储权限 (Storage Permissions) -->
     <!-- =================================================================================== -->
     <!-- 读取外部存储（Android 13 之前） -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="35" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <!-- 写入外部存储（Android 13 之前） -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="35"
-        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--    tools:ignore="ScopedStorage" /> -->
     <!-- 管理所有文件（特殊权限，需要用户手动授予） -->
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
 
     <!-- =================================================================================== -->
     <!-- 地理位置权限 (Location Permissions) -->
