@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sudden.aaa">
+
+    <!-- =================================================================================== -->
+    <!-- 基本权限 (Basic Permissions) -->
+    <!-- =================================================================================== -->
+    <!-- 互联网访问 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Wi-Fi 状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- =================================================================================== -->
+    <!-- 存储权限 (Storage Permissions) -->
+    <!-- =================================================================================== -->
+    <!-- 读取外部存储（Android 13 之前） -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="35" />
+    <!-- 写入外部存储（Android 13 之前） -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="35"
+        tools:ignore="ScopedStorage" />
+    <!-- 管理所有文件（特殊权限，需要用户手动授予） -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <!-- =================================================================================== -->
+    <!-- 地理位置权限 (Location Permissions) -->
+    <!-- =================================================================================== -->
+    <!-- 粗略位置（基于网络或基站） -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 精确位置（基于 GPS） -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 后台位置访问（Android 10 及更高版本） -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <!-- =================================================================================== -->
+    <!-- 相机和麦克风权限 (Camera and Microphone Permissions) -->
+    <!-- =================================================================================== -->
+    <!-- 相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- =================================================================================== -->
+    <!-- 电话权限 (Phone Permissions) -->
+    <!-- =================================================================================== -->
+    <!-- 读取电话状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 拨打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 读取通话记录 -->
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <!-- 写入通话记录 -->
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+
+    <!-- =================================================================================== -->
+    <!-- 联系人权限 (Contacts Permissions) -->
+    <!-- =================================================================================== -->
+    <!-- 读取联系人 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 写入联系人 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <!-- =================================================================================== -->
+    <!-- 日历权限 (Calendar Permissions) -->
+    <!-- =================================================================================== -->
+    <!-- 读取日历 -->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <!-- 写入日历 -->
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <!-- =================================================================================== -->
+    <!-- 短信权限 (SMS Permissions) -->
+    <!-- =================================================================================== -->
+    <!-- 发送短信 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 读取短信 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <!-- 接收短信 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <!-- =================================================================================== -->
+    <!-- 传感器权限 (Sensors Permissions) -->
+    <!-- =================================================================================== -->
+    <!-- 使用传感器 -->
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+
+    <!-- =================================================================================== -->
+    <!-- 其他权限 (Other Permissions) -->
+    <!-- =================================================================================== -->
+    <!-- 开机自启动 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 振动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 前台服务 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <!-- =================================================================================== -->
+    <!-- 硬件特性声明 (Hardware Features) -->
+    <!-- =================================================================================== -->
+    <!-- 相机 -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <!-- GPS -->
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <!-- 麦克风 -->
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
+    <!-- 电话 -->
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Aaa"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
